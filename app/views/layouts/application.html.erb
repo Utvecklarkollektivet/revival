@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Revival</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" id="menu" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Utvecklarkollektivet</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Artiklar", articles_path %></li>
+            <li><a href="#about">Projekt</a></li>
+            <li><%= link_to "Medlemmar", members_path %></li>
+          </ul>
+
+					<div class="social navbar-right">
+						<%= link_to "https://twitter.com/intent/tweet?status=#{request.original_url}", :target => "_blank" do %>
+							<%= image_tag "twitter-icon.png", :class => "icon" , :alt => "Delta på twitter" %>
+						<% end %>
+					</div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	<div class="container-fluid main">
+		<div class="row">
+			<div class="col-md-12">
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+			</div>
+		</div>
+		<div class="row">
+				<%= yield %>
+		</div>
+	</div>
+
+</body>
+</html>

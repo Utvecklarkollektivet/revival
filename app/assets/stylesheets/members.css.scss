@@ -1,0 +1,15 @@
+.members-list {
+	margin-top: 1em;
+
+	.member-item {
+		background: #FFF;
+		margin-bottom: 1em;
+		padding: 1em 4em !important;
+		border: solid 1px #d1d1c9;
+		line-height: 1.8em;
+
+		.col-md-9 {
+			padding: 0.8em 4em;
+		}
+	}
+}

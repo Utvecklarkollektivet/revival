@@ -1,0 +1,30 @@
+body {
+	background: #eae7de !important;
+
+	.default-box {
+		margin-top: 1em;
+    background: #FFF;
+    padding: 1em 4em !important;
+    border: solid 1px #d1d1c9;
+    line-height: 1.8em
+	}
+}
+
+#menu {
+	background: #c83935;
+	border-bottom: solid 2px #ba3634;
+
+	a {
+		color: #fff;
+	}
+	
+	.social {
+		.icon {
+			width: 3em;
+			margin-top: .3em;
+			margin-right: 1em;	
+		}
+	}
+
+}
+

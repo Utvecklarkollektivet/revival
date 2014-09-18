@@ -1,0 +1,18 @@
+<div class="col-md-8 col-md-offset-2 default-box">
+
+	<%= link_to "Ny artikel", new_admin_article_path %><br/>
+	<table class="table">
+		<thead>
+			<th>Titel</th>
+			<th>Författare</th>
+		</thead>
+		<tbody>
+			<% @articles.each do |a| %>
+				<tr>
+					<td><%= a.title %></td>
+          <td><%= a.user.name %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</div>	
+</div>

@@ -1,0 +1,13 @@
+<div class="col-md-8 col-md-offset-2 members-list">
+	<% @members.each do |m| %>
+		<div class="row member-item">
+			<div class="col-md-1">
+				<%= image_tag m.gravatar, :alt => m.name, :class => "img-circle" %>			
+			</div>
+			<div class="col-md-9">
+				<strong><%= link_to m.name, m %></strong><br/>
+				<span><%= m.work %> - <%= m.location %></span><br/>
+			</div>
+		</div>
+	<% end %>
+</div>

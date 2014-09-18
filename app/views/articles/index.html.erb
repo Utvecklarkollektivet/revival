@@ -1,0 +1,7 @@
+<div class="col-md-10 col-md-offset-1">
+
+	<% @articles.each_slice(4).to_a.each do |articles| %>
+		<%= render partial: "articles/article_row", locals: {articles: articles} %>
+	<% end %>
+
+</div>

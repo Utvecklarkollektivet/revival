@@ -1,0 +1,13 @@
+<div class="row">
+	<% articles.each do |article| %>
+  <div class="col-md-3	 article-item">
+  	<%= image_tag article.featured_image %>
+    <h3><%= link_to article.title, article %></h3>
+    <span class="meta">
+    </span>
+    <p>
+	    <%= article.excerpt %>
+    </p>
+  </div>
+	<%end%>
+</div>
