@@ -1,4 +1,6 @@
 class Admin::ArticlesController < ApplicationController
+	before_action :set_article, :only => [ :show, :edit, :update, :destroy ]
+
 	def index
 		@articles = Article.all.order(:created_at)
 	end
@@ -16,9 +18,12 @@ class Admin::ArticlesController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
 	private
 	def article_params
-		params.require(:article).permit( :title, :excerpt, :content, :featured_image )
+		params.require(:article).permit( :title, :excerpt, :content, :featured_image, :published, :published_at )
 	end
 
 end

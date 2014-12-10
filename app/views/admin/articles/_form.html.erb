@@ -1,0 +1,32 @@
+<%= form_for [:admin, @article] do |f| %>
+  <div class="form-group">
+    <%= f.label :title, 'Titel' %>
+    <%= f.text_field :title, :class=>"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :excerpt, 'Utdrag' %>
+    <%= f.text_area :excerpt, :class=>"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content, 'Innehåll (Markdown)' %>
+    <%= f.text_area :content, :class=>"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :featured_image, 'Omslagsbild (URL)' %>
+    <%= f.text_field :featured_image, :class=>"form-control" %>
+  </div>
+
+	<div class="form-group">
+		<%= f.label :published, "Publicerad" %><br/>
+		<%= f.check_box :published %><br/>
+		<%= f.label :published_at, "Publiseringsdatum" %>
+		<%= f.date_field :published_at, :class=>"form-control" %>
+	</div>
+
+  <br/>
+  <%= f.submit "Spara", :class => "btn btn-primary" %>
+<% end %>
+

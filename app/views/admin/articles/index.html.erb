@@ -11,6 +11,7 @@
 				<tr>
 					<td><%= a.title %></td>
           <td><%= a.user.name %></td>
+					<td><%= link_to 'Ändra', edit_admin_article_path(a) %>
 				</tr>
 			<% end %>
 		</tbody>
